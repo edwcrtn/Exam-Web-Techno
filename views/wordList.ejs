@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary List</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/word/add">Add a word</a>
+        <h1>Vocabulary</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Translation</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < dictionary.length; i++) { %>
+                    <tr>
+                        <td><%= dictionary[i].english_word %></td>
+                        <td><%= dictionary[i].french_translation %></td>
+                        <td>
+                            <a href="/word/remove/<%= dictionary[i].idword %>">Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <a href="/word/random">Test your vocabulary!</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Word</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a word</h1>
+        <form action="/word/new" method="POST">
+            <label for="english_word">Word:</label>
+            <input type="text" name="english_word" value="<%= english_word %>" />
+            <label for="french_translation">Translation:</label>
+            <input type="text" name="french_translation" value="<%= french_translation %>" />
+            <input type="hidden" name="idword" value="<%= idword %>" />
+            <input type="submit" name="save" value="Save" />
+        </form>
+        <a href="/word">Back to Vocabulary List</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Translate</h1>
+        <p>English word: <strong><%= word.english_word %></strong></p>
+        
+        <form action="/word/check" method="POST">
+            <label for="french_translation">Traduction en français :</label>
+            <input type="text" name="french_translation" id="french_translation" required />
+            <input type="hidden" name="idword" value="<%= word.idword %>" />
+            <button type="submit">Check</button>
+        </form>
+
+        <a href="/word/random">Test another word</a><br>
+        <a href="/word">Go to vocabulary</a>
+    </div>
+</body>
+</html>
